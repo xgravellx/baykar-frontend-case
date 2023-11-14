@@ -68,14 +68,14 @@ const Question = ({ question, setAnswer, currentQuestion, totalQuestion }: IQues
     return (
         <>
             <div className="progress-bar h-1 w-0 bg-gray-700" ref={progressBar}></div>
-            <div className="my-5 text-center text-sm text-indigo-400">
+            <div className="my-5 text-center text-sm text-indigo-400 flex justify-center gap-1">
                 <b>{currentQuestion}</b>
                 of
                 <span>{totalQuestion}</span>
             </div>
             <div className="px-10 py-5">
                 <div className="title">
-                    <span className="text-lg text-gray-500 font-semibold">{currentQuestion}. Question:</span>
+                    <span className="text-sm text-gray-500 font-semibold">{currentQuestion}. Question:</span>
                     <p className="mt-1.5 text-white">{question.title}</p>
                 </div>
                 <div className="my-10 mx-0 flex justify-between flex-wrap gap-5">
@@ -83,7 +83,7 @@ const Question = ({ question, setAnswer, currentQuestion, totalQuestion }: IQues
                         question.options.map((option, index) => (
                             <div
                                 key={index}
-                                className={`w-full h-16 border p-2.5 rounded-md cursor-pointer
+                                className={`w-full h-16 border p-2.5 rounded-md cursor-pointer flex justify-start items-center
                                 ${index === selectedOption ? ' bg-indigo-900 text-white' : ''}
                                 ${!activeClick ? 'bg-gray-700 text-slate-500 border-gray-700 cursor-wait' : 'border-indigo-950'}`}
                                 onClick={() => handleSelectOption(index)}
