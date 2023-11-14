@@ -1,17 +1,42 @@
-# Javascript Çalışması (Quiz App)
+# Quiz App
 
-10 sorudan oluşan bir quiz test app çalışması yapılması gerekmektedir.
+## Description
+This Quiz App is a dynamic web application featuring a 10-question quiz. Questions are fetched from an external API, and the app offers a timed and interactive quiz experience.
 
-Soru metinleri aşağıdaki linkten çekilecektir.
+## Feature
+- 10-question quiz format.
+- Questions sourced from JSONPlaceholder API.
+- A-B-C-D multiple-choice answers.
+- Each question is displayed for 30 seconds, with the first 10 seconds disabling answer selection.
+- Automatic progression to the next question after 30 seconds.
+- Final score and answers review at the end of the quiz.
 
-https://jsonplaceholder.typicode.com/posts
+## Technologies Used
+- ReactJS
+- TypeScript
+- Redux
+- Redux Saga
+- Vite
+- Reselect
+- Axios
+- Tailwind CSS
 
+## Live Demo
 
-## **Script’in Çalışma Sistemi**
+This project is deployed at [Your Deployed Project URL](http://example.com).
+Click the link to see the live version of our application.
 
-* Test çalışması toplamda 10 soru olmalı, A-B-C-D şıklarından oluşmalıdır. (Şıkları kendiniz soru içerisindeki string ifadelerden parse edip kullanabilirsiniz.)
-* Her soru ekranda 30 saniye kalacaktır, ilk 10 saniye cevap şıklarına tıklanamayacak olup 10. saniyeden sonra tıklanabilecektir ve 30. saniyeden sonra bir sonraki soruya geçmelidir.
-* Geçmiş sorulara dönülmemelidir.
-* Test bitiminde her soruya verilen yanıtlar tablo olarak gösterilmelidir.
+## Installation
+To install the project, run the following commands:
 
-Not: Javascript çalışmasının arayüzü konusunda herhangi bir kısıtlama yoktur herhangi bir arayüz kullanılabilir.
+```
+git clone https://github.com/xgravellx/baykar-frontend-case.git
+cd quiz-app
+npm install
+```
+
+## Usage
+To start the application, run:
+
+`npm run dev`
+
