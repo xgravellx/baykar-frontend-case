@@ -38,5 +38,8 @@ npm install
 ## Usage
 To start the application, run:
 
-`npm run dev`
+```
+npm run dev
+```
+
 
