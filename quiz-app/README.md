@@ -23,7 +23,7 @@ This Quiz App is a dynamic web application featuring a 10-question quiz. Questio
 
 ## Live Demo
 
-This project is deployed at [Your Deployed Project URL](http://example.com).
+This project is deployed at [Quiz App](https://baykar-quiz-app.vercel.app/).
 Click the link to see the live version of our application.
 
 ## Installation
