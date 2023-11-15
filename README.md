@@ -1,7 +1,7 @@
 # Baykar Frontend Case
 
 ## Description
-This repository has been prepared for the Baykar Frontend Case. It includes Landing Page and Quiz App projects.
+This repository has been prepared for the Baykar Frontend Case. It includes Landing Page ([source codes](https://github.com/xgravellx/baykar-frontend-case/tree/master/landing-page)) and Quiz App ([source codes](https://github.com/xgravellx/baykar-frontend-case/tree/master/quiz-app)) projects.
 
 ## Live Demo
 Click the link to see the live version of our application.
