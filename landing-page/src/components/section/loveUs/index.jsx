@@ -1,17 +1,23 @@
 import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
+import {useCallback, useRef} from "react";
 import 'swiper/css';
 
 import {cardList, loveUsText} from './data.js';
 
 const LoveUs = () => {
-    const goPrev = () => {
-    };
+    const sliderRef = useRef(null);
 
-    const goNext = () => {
-    };
+    const handlePrev = useCallback(() => {
+        if (!sliderRef.current) return;
+        sliderRef.current.swiper.slidePrev();
+    }, []);
 
+    const handleNext = useCallback(() => {
+        if (!sliderRef.current) return;
+        sliderRef.current.swiper.slideNext();
+    }, []);
     return (
         <section className="love-us-main container mx-auto px-[16px] py-[48px] gap-[32px] md:gap-[80px] md:py-[80px] relative flex flex-col justify-start items-start">
             <div className="header-and-button flex justify-between items-center w-full">
@@ -19,11 +25,11 @@ const LoveUs = () => {
                     {loveUsText}
                 </h2>
                 <div className="swiper-button-wrapper flex justify-center items-center gap-[24px] max-[639px]:hidden">
-                    <button onClick={goPrev}
+                    <button onClick={handlePrev}
                             className="swiper-prev rounded-[99px] border-2 border-solid border-[#78350F] p-[12px] flex justify-center items-center">
                         <img src={ArrowLeftIcon} alt=""/>
                     </button>
-                    <button onClick={goNext}
+                    <button onClick={handleNext}
                             className="swiper-next rounded-[99px] border-2 border-solid border-[#78350F] p-[12px] flex justify-center items-center rotate-180">
                         <img src={ArrowLeftIcon} alt=""/>
                     </button>
@@ -31,6 +37,7 @@ const LoveUs = () => {
             </div>
             <div className="slider-area w-full p-[40px] relative overflow-hidden">
                 <Swiper
+                    ref={sliderRef}
                     loop={true}
                     slidesPerView="auto"
                     spaceBetween={30}
